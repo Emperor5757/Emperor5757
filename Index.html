@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ 
+    <title></title>
+    <style type="text/css" media="all">
+        *{
+                margin: 0px;
+                padding: 0px;
+                background-color:#505054;
+        }  
+        body{
+           display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+        }
+        .box{
+          height: 300px;
+             width: 200px;
+         background-color: #5F67BE00;   
+             display: flex;
+             transform: perspective(1000px)rotateY(-60deg);
+             justify-content: center;
+             align-items: center;
+             transform-style: preserve-3d;
+        }
+ @keyframes rotet{
+         0%{
+                 transform: perspective(800px) rotateX(359deg);
+         }
+       100%{
+                 transform: perspective(800px) rotateX(0deg);
+         }
+ }   
+      .box div {
+             height: 100%;
+             width: 100%;
+             display: block;
+             background: #ffffff;
+        animation: rotet 2s linear infinite;      
+                   transform-style: preserve-3d;
+                   border-radius: 11px;
+          transform-origin: center;    
+                 background: linear-gradient(0deg,aqua, #DD34FF, aqua);
+          transform: perspective(1000px);
+        }
+        .box div span{
+                
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                border-radius: 11px;
+                height: 100%;
+                width: 100%;
+                background: linear-gradient(0deg,aqua, #DD50FF, aqua);
+        }
+     .box div span:nth-child(1){
+                transform: perspective(1000px) rotateX(0deg);
+        }
+     .box div span:nth-child(2){
+              transform:  rotateX(45deg);
+        }
+           .box div span:nth-child(3){
+           transform: rotateX(90deg);
+           }
+              .box div span:nth-child(4){
+              transform: rotateX(-45deg);
+              }
+        
+    </style>
+</head>
+
+<body>
+<div class="box">
+    <div>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+          
+    </div> 
+</div>
+</body>
+
+</html>
